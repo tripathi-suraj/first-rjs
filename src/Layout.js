@@ -4,10 +4,8 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Boook from './pages/Boook';
 import Notfound from './pages/Notfound';
-import Booklist from './pages/Booklist';
-import { BookLayout } from './pages/BookLayout';
+import { BookRoutes } from './pages/BookRoutes';
 
 
 
@@ -24,10 +22,7 @@ function Layout() {
       <Routes>
         <Route path='/' element={ <Home/>} />
         <Route path='/contact' element={ <Contact/>} />
-        <Route path='/books' element={<BookLayout/>}>
-          <Route index element={ <Booklist/>} />
-          <Route path=':id' element={ <Boook/>} />
-        </Route>
+        <Route path='/books/*' element={<BookRoutes/>}/>
         <Route path='*' element={ <Notfound/>} />
       </Routes>
     </>

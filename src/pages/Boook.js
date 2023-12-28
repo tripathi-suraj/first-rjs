@@ -1,11 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useOutletContext, useParams } from 'react-router-dom'
 
 function Boook() {
   const param=useParams();
+  const out=useOutletContext();
   return (
     <>
-      <h1>Books {param.id}</h1>
+      <h1>Books {param.id} {out.title}</h1>
     </>
   )
 }
