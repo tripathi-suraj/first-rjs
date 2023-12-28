@@ -19,6 +19,9 @@ function Layout() {
         {path:'contact',element:<Contact/>},
         {path:'books',element:<BookRoutes/>}
       ]
+    },
+    {
+      path:'*',element:<Notfound/>
     }
   ])
   return (
