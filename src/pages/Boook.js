@@ -2,10 +2,11 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 function Boook() {
-const param=useParams();
-console.log(param)
+  const param=useParams();
   return (
-    <div>Boook</div>
+    <>
+      <h1>Books {param.id}</h1>
+    </>
   )
 }
 
